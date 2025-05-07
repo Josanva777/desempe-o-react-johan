@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.contacto-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #6B7280, #4B5EAA);
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+  padding: 3rem;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.contacto-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 2rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeInDown 1s ease-out;
+}
+
+.contacto-content {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.contacto-form-section,
+.contacto-direct-section {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideInUp 0.8s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.contacto-section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.contacto-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(to right, #F97316, #EF4444);
+  border-radius: 2px;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contacto-form label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #F9FAFB;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  outline: none;
+  border-color: #F97316;
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.3);
+}
+
+.contacto-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contacto-form button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(to right, #F97316, #EF4444);
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contacto-direct-section p {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin: 0 0 1rem;
+}
+
+.contacto-chat-link {
+  color: #F97316;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contacto-chat-link:hover {
+  color: #EF4444;
+}
+
+.contacto-back-button {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(to right, #F97316, #EF4444);
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-self: center;
+}
+
+.contacto-back-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
